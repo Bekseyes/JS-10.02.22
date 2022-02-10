@@ -1,7 +1,7 @@
 <html>
-    <head> <title> Hello World</title> </head>
-    <body>
-        <div id="Second">
+<head> <title> Hello World</title> </head>
+<body>
+<div id="Second">
             Does she need to be an empathetic leader ? Ask about that . Does she need to take your company public ?
             Ask about that . If you're the candidate , talk about why you took certain jobs . Explain why you left .
             Explain why you chose a certain school . Share why you decided to go to grad school .
@@ -16,28 +16,28 @@
             Even so , if you're asked , provide a sharp , on-point answer . Be clear and precise ! If you're a great problem solver ,
             don't just say that: Providea few examples , pertinent to the opening , that prove you're a great problem solver !
             If you're an emotionally intelligent leader , don't just say that !
-        </div>
-        <button> <a href="https://www.inc.com/jeff-haden/this-new-linkedin-study-reveals-top-8-job-interview-questions-and-how-great-job-candidates-answer-them.html">
-            Link for the text </a> </button>
-        <p> Number of words = </p>
-        <p id="result">  </p>
-        <script>
-        window.onload = function() {
-            var result = 0;
-            check = (word) => {
-            if (word.length > 8) {
-                word = '<span style="background:yellow;">' + word + '</span>';
-              } else if( word == '.' ){ word = '<span>'+word+'<br\>'+'</span>' }
-              else if(word.length > 1) { result = result + 1; }
-              else if(word == '?') { word = '<span>'+'🤔'+'</span>' }
-              else if(word == '!') { word = '<span>'+'😲'+'</span>' }
-              else { word; } return word;
-            }
-            var str = document.querySelector("#Second").innerText;
-            var newt = str.trim().split(' ').map(check).join(' ');
-            document.querySelector("#Second").innerHTML = newt;
-            document.getElementById("result").innerHTML = result;
-          }
-        </script>
-    </body>
+</div>
+<button> <a href="https://www.inc.com/jeff-haden/this-new-linkedin-study-reveals-top-8-job-interview-questions-and-how-great-job-candidates-answer-them.html">
+             Link for the text </a> </button>
+<p> Number of words = </p>
+<p id="result">  </p>
+   <script>
+   window.onload = function() {
+   var result = 0;
+       check = (word) => {
+       if (word.length > 8) {
+       word = '<span style="background:yellow;">' + word + '</span>';
+       } else if( word == '.' ){ word = '<span>'+word+'<br\>'+'</span>' }
+         else if(word.length > 1) { result = result + 1; }
+         else if(word == '?') { word = '<span>'+'🤔'+'</span>' }
+         else if(word == '!') { word = '<span>'+'😲'+'</span>' }
+         else { word; } return word;
+       }
+         var str = document.querySelector("#Second").innerText;
+         var newt = str.trim().split(' ').map(check).join(' ');
+         document.querySelector("#Second").innerHTML = newt;
+         document.getElementById("result").innerHTML = result;
+       }
+   </script>
+</body>
 </html>
